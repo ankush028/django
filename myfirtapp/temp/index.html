@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+
+	<title>Ankush-Web</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>	
+	<header>
+		<div class ="main">
+		   <div class ="logo">	
+			<img src="{% static 'ankush.png' %}" >
+		    </div>
+			<ul></br>
+			<li class ="active"><a href="{% static '#' %}"><u>Home</u></a></li>
+			<li class="menu_item"><a href="{% static '#' %}"><u>Services</u></a></br>
+			     <ul class="submenu">
+				<li class "submenu_item"><a href="{% static '#' %}">Java</a></li>				
+				<li class "submenu_item"><a href="{% static '#' %}">Python</a></li>
+				<li class "submenu_item"><a href="{% static '#' %}">Devops</a></li>
+				<li class "submenu_item"><a href="{% static '#' %}">Selenium</a></li>
+				<li class "submenu_item"><a href="{% static '#' %}">Manual</a></li>
+			     </ul>
+			</li>
+			<li><a href="{% static '#' %}"><u>Gallery</u></a></li>
+			<li><a href="{% static 'Frame/about.html' %}"><u>About us</u></a></li>
+			<li><a href="{% static 'register.html' %}"><u>Register</u></a></li>
+			<li><a href="{% static '#' %}"><u>Contact</u></a></li>
+			</ul>
+		</div>
+		<div class ="title">
+			<mark> COMPUTER PROGRAMMER</mark>
+		</div>
+		<div class ="button">
+			<a href="{% static 'Frame/frame.html' %}" class ="btn">Watch Video</a>			
+			<a href="{% static '#' %}" class ="btn">Learn More</a>
+		</div>		
+	</header>
+</body>
+</html>

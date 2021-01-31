@@ -52,7 +52,7 @@ ul li.active a{
 }
 .title mark{
 	color: cyan;
-	font-size: 50px;
+	font-size: 40px;
 }
 .title p strike{
 	color: blue;
@@ -89,6 +89,7 @@ ul li.active a{
 	transition: 1s all;	
 	animation: 1s drop ease
 }
+
 @keyframes drop{
      0%{
 	transform: scale(2,2) rotateX(90deg)

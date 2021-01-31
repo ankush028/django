@@ -1,15 +1,16 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <html>
 <head>
-
 	<title>Ankush-Web</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/card.css' %}">
 </head>
 <body>	
 	<header>
 		<div class ="main">
 		   <div class ="logo">	
-			<img src="{% static 'ankush.png' %}" >
+			<img src="{% static 'images/ankush.png' %}" >
 		    </div>
 			<ul></br>
 			<li class ="active"><a href="{% static '#' %}"><u>Home</u></a></li>
@@ -34,7 +35,21 @@
 		<div class ="button">
 			<a href="{% static 'Frame/frame.html' %}" class ="btn">Watch Video</a>			
 			<a href="{% static '#' %}" class ="btn">Learn More</a>
-		</div>		
+		</div>					
 	</header>
+	{% for product in products %}
+	<div class="row">		
+		<div class="column">
+			<div class="card">
+				<img src="{{product.img.url}}" alt="Denim Jeans" style="width:100%" >
+					<h1>{{product.name}}</h1>
+						<p class="price">Rs {{product.price}}</p>
+						<p>{{product.desc}}</p>
+						<p><button>Add to Cart</button></p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
 </body>
 </html>
